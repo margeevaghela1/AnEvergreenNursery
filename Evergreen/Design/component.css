@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:weight@300;400;500;600&display=swap');
+
+:root{
+    --green: #27ae60;
+    --orange: #f39c12;
+    --red: #e74c3c;
+    --black: #333;
+    --light-bg: #f6f6f6;
+    --border: .2rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Rubik', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none; border: none;
+    text-decoration: none;
+    color: var(--black);
+}
+
+*::selection{
+    background-color: var(--green);
+    color: white;
+}
+
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: var(--green);
+}
+
+html{
+    font-size: 62.5%;
+    /* overflow: hidden; */
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+
+.header-1,
+.header-2,
+.header-3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: #1da453;
+}
+
+.header-1{
+    border-bottom: .1rem solid rgba(255,255,255,.2);
+}
+
+.header-3{
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    position: relative;
+    z-index: 10000;
+}
+
+.header-1 span{
+    font-weight: lighter;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.header-1 a{
+    padding: 0 .7rem;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.header-1 a:hover{
+    color: aqua;
+}
+
+.header-2 img{
+    width: 150px;
+    margin-right: 0;
+}
+
+/*.header-2 .logo i{
+    color: yellow;
+}*/
+
+.header-2 .search-bar-container{
+    display: flex;
+    align-items: center;
+    width: 50rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,.2);
+    border-radius: .5rem;
+}
+
+.header-2 .search-bar-container #search-bar{
+    width: 100%;
+    background: none;
+    text-transform: none;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.header-2 .search-bar-container #search-bar::placeholder{
+    text-transform: capitalize;
+    color: #ddd;
+}
+
+.header-2 .search-bar-container label{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0 .5rem;
+}
+
+.header-2 .search-bar-container label:hover{
+    color: yellow;
+}
+
+.header-3 .navbar a{
+    color: #666;
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+
+.header-3 .icons a{
+    color: #666;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header-3 a:hover{
+    color: var(--green);
+}
+
+#menu_bar{
+    font-size: 3rem;
+    color: #666;
+    border: .1rem solid #666;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.header-3.active{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+}
+
+.message{
+    position: sticky;
+    top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: lightgreen;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    z-index: 10000;
+}
+
+.message span{
+    font-size: 1.8rem;
+    color: black;
+}
+
+.message i{
+    cursor: pointer;
+    color: red;
+}
+
+.message i:hover{
+    color: black;
+}
+
+.empty{
+    padding: 1.5rem;
+    background: #fff;
+    color: #e74c3c;
+    border-radius: .5rem;
+    border: var(--border);
+    font-size: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+section{
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn,
+.delete-btn,
+.option-btn{
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    color: #000;
+    font-size: 2rem;
+    padding: 1.5rem 3rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn{
+    background-color: yellow;
+}
+
+.delete-btn{
+    background-color: var(--red);
+}
+
+.option-btn{
+    background-color: var(--orange);
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover{
+    background-color: #666;
+    color: #fff;
+}
+
+@keyframes fadeIn {
+    0%{
+        transform: translateY(1rem);
+    }
+}
+
+.flex-btn{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.flex-btn > *{
+    flex: 1;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 3.5rem;
+}
+
+.header{
+    background: #222121;
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+.header .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.header .flex .logo{
+    font-size: 2.5rem;
+    color: #ddd;
+}
+
+.header .flex .logo span{
+    color: var(--green);
+}
+
+.header .flex .nav_bar a{
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #ddd;
+}
+
+.header .flex .nav_bar a:hover{
+    text-decoration: underline;
+    color: var(--green);
+}
+
+.header .flex .icons > *{
+    font-size: 2.5rem;
+    color: #ddd;
+    cursor: pointer;
+    margin-left: 1.5rem;
+}
+
+.header .flex .icons > *:hover{
+    color: var(--green);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .flex .profile{
+    position: absolute;
+    top: 100%; right: 2rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    border-radius: .5rem;
+    padding: 4rem;
+    text-align: center;
+    background-color: #fff;
+    width: 33rem;
+    display: none;
+    animation: fadeIn .2s linear;
+}
+
+.header .flex .profile.active{
+    display: inline-block;
+}
+
+.header .flex .profile img{
+    height: 15rem;
+    width: 15rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header .flex .profile p{
+    padding: .5rem 0;
+    font-size: 2rem;
+    color: #666;
+}
+
+.update-profile form{
+    max-width: 70rem;
+    margin: 0 auto;
+    background-color: var(--green);
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    /* border-radius: .5rem; */
+    padding: 2rem;
+    text-align: center;
+}
+
+
+.update-profile form .flex{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.update-profile form img{
+    height: 20rem;
+    width: 20rem;
+    margin-bottom: 1rem;
+    border-radius: 30%;
+    object-fit: cover;
+}
+
+.update-profile form .inputBox{
+    text-align: left;
+    width: 49%;
+}
+
+.update-profile form .inputBox span{
+    display: block;
+    padding-top: 1rem;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+
+.update-profile form .inputBox .box{
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    font-size: 1.8rem;
+    color: #333;
+    border: var(--border);
+    /* border-radius: .5rem; */
+    margin: 1rem 0;
+    background-color: #f6f6f6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px){
+
+    .header-1,
+    .header-2,
+    .header-3{
+        padding: 2rem;
+    }
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    #menu_bar{
+        display: initial;
+    }
+
+    .header-3 .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        padding: 1rem 2rem;
+        border-top: .1rem solid rgba(0,0,0,.3);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header-3 .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header-3 .navbar a{
+        display: block;
+        margin: 1.5rem 0;
+        padding: 1.5rem;
+        border-radius: .5rem;
+        border: .1rem solid rgba(0,0,0,.3);
+        background: #fff;
+        text-align: center;
+    }
+
+    .header-2{
+        flex-flow: column;
+    }
+
+    .header-2 .search-bar-container{
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .header .flex .nav_bar{
+        border-top: var(--border);
+        border-bottom: var(--border);
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        top: 99%; left: 0; right: 0;
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .flex .nav_bar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .flex .nav_bar a{
+        display: block;
+        margin: 2rem;
+    }
+
+    .update-profile form .flex{
+        flex-wrap: wrap;
+        gap: 0;
+    }
+
+    .update-profile form .flex .inputBox{
+        width: 100%;
+    }
+
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .flex-btn{
+        flex-flow: column;
+        gap: 0;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+
+    .header-1{
+        display: none;
+    }
+}

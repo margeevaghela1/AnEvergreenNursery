@@ -1,0 +1,9 @@
+<ul class="pagination">
+        <li class="pagination-item">&laquo;</li>
+        <li class="pagination-item active">1</li>
+        <li class="pagination-item"> <a href="flower2.html"> 2 </a></li>
+        <li class="pagination-item">3</li>
+        <li class="pagination-item">4</li>
+        <li class="pagination-item">5</li>
+        <li class="pagination-item">&raquo;</li>
+    </ul>
